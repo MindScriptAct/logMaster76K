@@ -2,9 +2,6 @@ package com.mindscriptact.logmaster {
 import com.mindscriptact.logmaster.controller.core.StartupCommand;
 import org.puremvc.as3.interfaces.IFacade;
 import org.puremvc.as3.patterns.facade.Facade;
-import com.mindscriptact.logmaster.model.*;
-import com.mindscriptact.logmaster.viewOld.*;
-import com.mindscriptact.logmaster.controller.*;
 
 /**
  * ...
