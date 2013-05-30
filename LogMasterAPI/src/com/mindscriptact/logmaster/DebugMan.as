@@ -46,9 +46,9 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='debug'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='debug'><![CDATA[" + data + "]]></msg>");
 	}
-
+	
 	static public function info(... args:Array):void {
 		//trace("DebugMan.info >  args : " +  args);
 		var data:String = String(args[0]);
@@ -56,7 +56,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='info'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='info'><![CDATA[" + data + "]]></msg>");
 	}
 
 	static public function warn(... args:Array):void {
@@ -66,7 +66,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='warn'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='warn'><![CDATA[" + data + "]]></msg>");
 	}
 
 	static public function error(... args:Array):void {
@@ -76,7 +76,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='error'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='error'><![CDATA[" + data + "]]></msg>");
 	}
 
 	static public function fatal(... args:Array):void {
@@ -86,7 +86,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='fatal'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='fatal'><![CDATA[" + data + "]]></msg>");
 	}
 
 	//////////////////////
@@ -95,12 +95,12 @@ public class DebugMan {
 	
 	static public function debugTo(tabId:int, ... args:Array):void {
 		//trace("DebugMan.debug > args : " + args);
-		var data:String = String(args[0]);
+		var data:String = args[0];
 
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='debug' tabid='"+tabId+"'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='debug' tabid='"+tabId+"'><![CDATA[" + data + "]]></msg>");
 	}
 
 	static public function infoTo(tabId:int, ... args:Array):void {
@@ -110,7 +110,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='info' tabid='"+tabId+"'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='info' tabid='"+tabId+"'><![CDATA[" + data + "]]></msg>");
 	}
 
 	static public function warnTo(tabId:int, ... args:Array):void {
@@ -120,7 +120,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='warn' tabid='"+tabId+"'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='warn' tabid='"+tabId+"'><![CDATA[" + data + "]]></msg>");
 	}
 
 	static public function errorTo(tabId:int, ... args:Array):void {
@@ -130,7 +130,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='error' tabid='"+tabId+"'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='error' tabid='"+tabId+"'><![CDATA[" + data + "]]></msg>");
 	}
 
 	static public function fatalTo(tabId:int, ... args:Array):void {
@@ -140,7 +140,7 @@ public class DebugMan {
 		for (var i:int = 1; i < args.length; i++){
 			data = data + " " + String(args[i]);
 		}
-		RawMan.sendRowData("<msg type='fatal' tabid='"+tabId+"'>" + data + "</msg>");
+		RawMan.sendRowData("<msg type='fatal' tabid='"+tabId+"'><![CDATA[" + data + "]]></msg>");
 	}
 	
 	
@@ -162,7 +162,7 @@ public class DebugMan {
 							+((textColor >= 0) ? (" color='" + textColor + "'") : "" )
 							+((bgColor) ? (" bgcolor='" + String(bgColor) + "'") : "" )
 							+((tabId>=0) ? (" tabid='" + tabId + "'") : "" )
-							+">" + data + "</msg>");
+							+"><![CDATA[" + data + "]]></msg>");
 	}
 	
 	//////////////////////
@@ -185,17 +185,17 @@ public class DebugMan {
 	 */
 	static public function renameTab(tabId:int, name:String):void {
 		//trace("DebugMan.changeTab > tabId : " + tabId + ", name : " + name);
-		RawMan.sendRowData("<cmd tabId='" + int(tabId) + "' name='" + escape(name) + "'>renameTab</cmd>");
+		RawMan.sendRowData("<cmd tabId='" + int(tabId) + "' name='" + escape(name) + "'><![CDATA[renameTab</cmd>");
 	}	
 	
 	
 	static public function enableTabs(tabs:Array):void {
-		RawMan.sendRowData("<cmd tabIds='" + tabs + "' >enableTabs</cmd>");
+		RawMan.sendRowData("<cmd tabIds='" + tabs + "' ><![CDATA[enableTabs</cmd>");
 
 	}
 	
 	static public function disableTabs(tabs:Array):void {
-		RawMan.sendRowData("<cmd tabIds='" + tabs + "'>disableTabs</cmd>");
+		RawMan.sendRowData("<cmd tabIds='" + tabs + "'><![CDATA[disableTabs</cmd>");
 
 	}
 }
