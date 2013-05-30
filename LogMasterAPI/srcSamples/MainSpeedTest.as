@@ -1,6 +1,6 @@
 package {
 //import com.hexagonstar.util.debug.Debug;
-import com.mindscriptact.logmaster.DebugMan;
+import mindscriptact.logmaster.DebugMan;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;

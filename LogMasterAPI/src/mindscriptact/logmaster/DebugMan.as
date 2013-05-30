@@ -1,20 +1,20 @@
-﻿package com.mindscriptact.logmaster {
+﻿package mindscriptact.logmaster {
 
 /**
  * All core and optional LogMaster functionality can be trigered from here.
  * @author Deril
  */ // FIXME : rename
 public class DebugMan {
-	
+
 	// as3 levels
 	public static const LEVEL_DEBUG:int	= 0;
-	
+
 	public static const LEVEL_INFO:int	= 1;
-	
+
 	public static const LEVEL_WARN:int	= 2;
-	
+
 	public static const LEVEL_ERROR:int	= 3;
-	
+
 	public static const LEVEL_FATAL:int	= 4;
 
 	// text styles
@@ -34,11 +34,11 @@ public class DebugMan {
 
 	static public const TEXT_STYLE_BOLD_ITALIC_UNDERLINE:int = TEXT_STYLE_BOLD * TEXT_STYLE_ITALIC * TEXT_STYLE_UNDERLINE;
 
-	
+
 	//////////////////////
 	//	Debug to default tab.
 	//////////////////////
-	
+
 	static public function debug(... args:Array):void {
 		//trace("DebugMan.debug > args : " + args);
 		var data:String = String(args[0]);
@@ -48,7 +48,7 @@ public class DebugMan {
 		}
 		RawMan.sendRowData("<msg type='debug'><![CDATA[" + data + "]]></msg>");
 	}
-	
+
 	static public function info(... args:Array):void {
 		//trace("DebugMan.info >  args : " +  args);
 		var data:String = String(args[0]);
@@ -92,7 +92,7 @@ public class DebugMan {
 	//////////////////////
 	//	Debug to targeted tab.
 	//////////////////////
-	
+
 	static public function debugTo(tabId:int, ... args:Array):void {
 		//trace("DebugMan.debug > args : " + args);
 		var data:String = args[0];
@@ -142,33 +142,33 @@ public class DebugMan {
 		}
 		RawMan.sendRowData("<msg type='fatal' tabid='"+tabId+"'><![CDATA[" + data + "]]></msg>");
 	}
-	
-	
-	
+
+
+
 	//////////////////////
 	//	Debug ALL IN ONE.
-	//////////////////////	
-	
+	//////////////////////
+
 	// TODO : change data to any data, not only string
 	static public function log(data:String, level:int = 0, tabId:int = -1, textStyle:int = -1, textColor:int = -1, bgColor:Array = null):void {
-		RawMan.sendRowData("<msg" 
+		RawMan.sendRowData("<msg"
 							+" level='" + level + "'"
 							+ ((textStyle >= 0)	?	(	  " bold='" + int(!(textStyle % TEXT_STYLE_BOLD)) + "'"
 														+ " italic='" + int(!(textStyle % TEXT_STYLE_ITALIC)) + "'"
 														+ " underline='" + int(!(textStyle % TEXT_STYLE_UNDERLINE)) + "'"
-													) 
-												: "" 
+													)
+												: ""
 							  )
 							+((textColor >= 0) ? (" color='" + textColor + "'") : "" )
 							+((bgColor) ? (" bgcolor='" + String(bgColor) + "'") : "" )
 							+((tabId>=0) ? (" tabid='" + tabId + "'") : "" )
 							+"><![CDATA[" + data + "]]></msg>");
 	}
-	
+
 	//////////////////////
 	//	General functionalyty.
 	//////////////////////
-	
+
 	/**
 	 * Sets default tabId for all generic messages.
 	 * @param	tabId	- TabId to use as default, if specific is not provided.
@@ -177,7 +177,7 @@ public class DebugMan {
 	//static public function setTargetTab(tabId:int, name:String = ""):void {
 		//RawMan.sendRowData("<cmd tabId='" + int(tabId) + "' name='" + escape(name) + "'>setTargetTab</cmd>");
 	//}
-	
+
 	/**
 	 * Renames targeted tab.
 	 * @param	tabId	- id of the tab to rename.
@@ -186,14 +186,14 @@ public class DebugMan {
 	static public function renameTab(tabId:int, name:String):void {
 		//trace("DebugMan.changeTab > tabId : " + tabId + ", name : " + name);
 		RawMan.sendRowData("<cmd tabId='" + int(tabId) + "' name='" + escape(name) + "'><![CDATA[renameTab</cmd>");
-	}	
-	
-	
+	}
+
+
 	static public function enableTabs(tabs:Array):void {
 		RawMan.sendRowData("<cmd tabIds='" + tabs + "' ><![CDATA[enableTabs</cmd>");
 
 	}
-	
+
 	static public function disableTabs(tabs:Array):void {
 		RawMan.sendRowData("<cmd tabIds='" + tabs + "'><![CDATA[disableTabs</cmd>");
 

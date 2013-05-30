@@ -1,7 +1,7 @@
 package {
-import com.mindscriptact.logmaster.DebugMan;
-import com.mindscriptact.logmaster.LogMan;
-import com.mindscriptact.logmaster.RawMan;
+import mindscriptact.logmaster.DebugMan;
+import mindscriptact.logmaster.LogMan;
+import mindscriptact.logmaster.RawMan;
 import flash.display.Sprite;
 
 
@@ -27,12 +27,12 @@ public class MainMesengingLevels extends Sprite {
 			">" + //
 			"MainMesengingLevels :  Success is not forever and failure isn't fatal." + //
 			"</msg>");
-		
-		
+
+
 		// 'Public' usage.
 		DebugMan.errorTo(2, "MainMesengingLevels :  Success is not forever and failure isn't fatal.");
-		
-		
+
+
 		// 'Private' usage.
 		var log:LogMan = new LogMan("MainMesengingLevels", 2);
 		log.error("Success is not forever and failure isn't fatal.");

@@ -1,4 +1,4 @@
-﻿package com.mindscriptact.logmaster {
+﻿package mindscriptact.logmaster {
 
 
 /**
@@ -22,7 +22,7 @@ public class LogMan {
 	//////////////////////
 
 	// TODO : investigate what is faster, function.apply or pasing argument using for loop and pasing.. somehow.
-	
+
 	public function debug(... args:Array):void {
 		args.unshift(-1);
 		this.debugTo.apply(this, args);
