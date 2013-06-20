@@ -1,0 +1,33 @@
+<!-- Specifies the minimum player version that will run the compiled SWF. -->
+<!-- 9.0.124 is the April 2008 security release -->
+<target-player>10.0.0</target-player>
+
+<compiler>
+
+	<source-path>
+		<path-element>src</path-element>
+	</source-path>
+
+	<incremental>true</incremental>
+
+	<!-- Remove the "include" library path. -->
+	<library-path append="false"></library-path>
+
+	<!-- Set up an "external library" path that is compiled against but not linked. -->
+	<!-- SWCs not used for SP are left in but commented out to make it easier to copy this script -->
+	<external-library-path>
+		<path-element>${flexlib}/libs/player/{targetPlayerMajorVersion}/playerglobal.swc</path-element>
+		<path-element>${flexlib}/libs/framework.swc</path-element>
+	</external-library-path>
+
+</compiler>
+
+<static-link-runtime-shared-libraries>false</static-link-runtime-shared-libraries>
+
+<include-classes>
+	<class>mindscriptact.logmaster.DebugMan</class>
+	<class>mindscriptact.logmaster.LogMan</class>
+	<class>mindscriptact.logmaster.RawMan</class>
+</include-classes>
+
+<output>./bin/logMasterAPI.swc</output>

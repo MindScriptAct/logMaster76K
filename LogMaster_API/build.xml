@@ -1,0 +1,16 @@
+<project name="LogMaster API build" basedir="." default="build SWC">
+
+	<!-- load user configuration properties -->
+	<property file="build.properties" />
+
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+
+	<!-- =================================
+	  target: build SWC
+	  ================================= -->
+	<target name="build SWC">
+		<compc output="${basedir}/bit/logMasterAPI.swc" include-classes="mindscriptact.logmaster.DebugMans">
+			<source-path path-element="${src-dir}" />
+		</compc>
+	</target>
+</project>
