@@ -13,7 +13,7 @@ LogMaster 76K AIR installer
 
 LogMaster AS3 API
 ----------
-* [LagMaster-API_v0_4b.swc](https://github.com/MindScriptAct/logMaster76K/raw/master/LogMaster_downloads/LagMaster-API_v0_4b.swc)
+* [LogMaster-API_v0_4b.swc](https://github.com/MindScriptAct/logMaster76K/raw/master/LogMaster_downloads/LogMaster-API_v0_4b.swc)
 * [LogMaster-API_v0_4b.zip](https://github.com/MindScriptAct/logMaster76K/raw/master/LogMaster_downloads/LogMaster-API_v0_4b.zip)
 
 
