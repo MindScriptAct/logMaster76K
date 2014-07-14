@@ -1,22 +1,22 @@
 ﻿/*********************************************************************
  *  Copyright (C) 2010 by Raimundas Banevicius (raima156@yahoo.com)
- * 
- * 
+ *
+ *
  *	This file is part of LogMaster76K.
  *
  *	LogMaster76K is free software: you can redistribute it and/or modify
  *	it under the terms of the GNU General Public License as published by
  *	the Free Software Foundation, either version 3 of the License, or
  *	(at your option) any later version.
- *	
+ *
  *	LogMaster76K is distributed in the hope that it will be useful,
  *	but WITHOUT ANY WARRANTY; without even the implied warranty of
  *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *	GNU General Public License for more details.
- *	
+ *
  *	You should have received a copy of the GNU General Public License
  *	along with LogMaster76K.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  *********************************************************************/
 package com.mindscriptact.logmaster.dataOld {
 import com.mindscriptact.logmaster.dataOld.message.MessageData;
@@ -40,7 +40,7 @@ public class Storadge extends EventDispatcher {
 	/** Number of active(alive) clients. */
 	private var _clientCount:int = 0;
 
-	
+
 	/** Dictienary that contains tab data by id. */
 	private var tabDataStore:Dictionary = new Dictionary(); /** of TabData by int. */
 
@@ -139,6 +139,22 @@ public class Storadge extends EventDispatcher {
 		}
 	}
 
+	public function showDebugAppMessage(data:String):void {
+		//trace("Storadge.showAppMessage > data : " + data);
+		var messageData:MessageData = new MessageData();
+		messageData.msgText = Vector.<String>([data]);
+
+		if (!tabDataStore[int.MAX_VALUE]) {
+			createTab(int.MAX_VALUE, "SELF-DEBUG");
+		}
+		tabDataStore[int.MAX_VALUE].log.push(messageData);
+
+		if (_activeTabId == int.MAX_VALUE){
+			dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, int.MAX_VALUE));
+			dispatchEvent(new MessageEvent(MessageEvent.MESSAGE_UPDATE, tabDataStore[int.MAX_VALUE].log));
+		}
+	}
+
 	/**
 	 *
 	 */
@@ -166,7 +182,7 @@ public class Storadge extends EventDispatcher {
 
 			var targetTabId:int = clientTargetTab[clientId];
 
-			// parse parameters.		
+			// parse parameters.
 			if (xmlData.@type != undefined && xmlData.@type != ""){
 				////trace("xmlData.@type : " + xmlData.@type);
 				messageData.level = settings.getLevelByType(xmlData.@type);
@@ -212,10 +228,10 @@ public class Storadge extends EventDispatcher {
 				messageData.bgColors = settings.getBgColor(messageData.level);
 			}
 
-			if (xmlData.@tabid != undefined && xmlData.@tabid != ""){
+			if (xmlData.@tabid != null && xmlData.@tabid != ""){
 				targetTabId = int(xmlData.@tabid);
 
-				if (tabDataStore[targetTabId] == undefined){
+				if (tabDataStore[targetTabId] == null){
 					createTab(targetTabId);
 				}
 			}
@@ -226,7 +242,7 @@ public class Storadge extends EventDispatcher {
 			var messageLeftText:String = xmlData;
 			var messagePartText:String;
 			messageData.msgText = new Vector.<String>();
-			
+
 			while (breakPoint >= 0){
 				breakPoint = messageLeftText.indexOf("\n");
 
@@ -238,7 +254,7 @@ public class Storadge extends EventDispatcher {
 					messageLeftText = messageLeftText.substring(breakPoint + 1);
 				}
 				messageData.msgText.push(messagePartText);
-				
+
 			}
 			tabDataStore[targetTabId].log.push(messageData);
 
@@ -259,7 +275,7 @@ public class Storadge extends EventDispatcher {
 			case Commands.SET_TARGET_TAB:
 				tabId = int(xmlData.@tabId);
 				name = unescape(xmlData.@name)
-				if (tabDataStore[tabId] == undefined){
+				if (tabDataStore[tabId] == null){
 					createTab(tabId, name);
 				}
 				clientTargetTab[clientId] = tabId;
@@ -302,7 +318,7 @@ public class Storadge extends EventDispatcher {
 			removeTab(tabId);
 		}
 	}
-	
+
 	private function disableTabs(tabIds:Array):void {
 		//trace("Storadge.disableTabs > tabIds : " + tabIds);
 		for (var i:int = 0; i < tabIds.length; i++){
@@ -323,7 +339,7 @@ public class Storadge extends EventDispatcher {
 			}
 		}
 	}
-	
+
 	public function getActiveTabText():String {
 		var retVal:String = "";
 		var log:Vector.<MessageData> = tabDataStore[_activeTabId].log;
@@ -337,7 +353,7 @@ public class Storadge extends EventDispatcher {
 		}
 		return retVal;
 	}
-	
+
 	public function getLineText(textId:int):String {
 		var retVal:String = "";
 		var log:Vector.<MessageData> = tabDataStore[_activeTabId].log;
@@ -349,12 +365,12 @@ public class Storadge extends EventDispatcher {
 		}
 		return retVal;
 	}
-	
+
 	public function clearCurrentTab():void {
 		tabDataStore[_activeTabId].log = Vector.<MessageData>([]);
 		dispatchEvent(new MessageEvent(MessageEvent.MESSAGE_UPDATE, tabDataStore[_activeTabId].log));
 	}
-	
+
 
 
 }

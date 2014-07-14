@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<application xmlns="http://ns.adobe.com/air/application/3.7">
+<application xmlns="http://ns.adobe.com/air/application/14.0">
 	<id>com.mindscriptact.logmaster</id>
 	<versionNumber>0.07</versionNumber>
 	<filename>LogMaster76K</filename>

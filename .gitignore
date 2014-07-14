@@ -12,3 +12,5 @@ bin-release/
 /LogMasterAPI/.idea/workspace.xml
 
 /LogMasterApplication/.idea/workspace.xml
+.idea/
+*.iml

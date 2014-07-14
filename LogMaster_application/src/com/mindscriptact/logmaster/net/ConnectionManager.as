@@ -1,25 +1,26 @@
 ﻿/*********************************************************************
  *  Copyright (C) 2010 by Raimundas Banevicius (raima156@yahoo.com)
- * 
- * 
- *	This file is part of LogMaster76K.
  *
- *	LogMaster76K is free software: you can redistribute it and/or modify
- *	it under the terms of the GNU General Public License as published by
- *	the Free Software Foundation, either version 3 of the License, or
- *	(at your option) any later version.
- *	
- *	LogMaster76K is distributed in the hope that it will be useful,
- *	but WITHOUT ANY WARRANTY; without even the implied warranty of
- *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *	GNU General Public License for more details.
- *	
- *	You should have received a copy of the GNU General Public License
- *	along with LogMaster76K.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
+ *    This file is part of LogMaster76K.
+ *
+ *    LogMaster76K is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    LogMaster76K is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with LogMaster76K.  If not, see <http://www.gnu.org/licenses/>.
+ *
  *********************************************************************/
 package com.mindscriptact.logmaster.net {
 import com.mindscriptact.logmaster.dataOld.Storadge;
+
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.events.ServerSocketConnectEvent;
@@ -44,23 +45,29 @@ public class ConnectionManager {
 	private var dataStore:Storadge;
 
 	// TODO : implement several ports, and  bind to next once - if defalt is in use.
-	public function ConnectionManager(dataStore:Storadge){
+	public function ConnectionManager(dataStore:Storadge) {
 		//trace("ConnectionManager.ConnectionManager");
 		this.dataStore = dataStore;
 	}
-	
+
 	public function startIt(event:MouseEvent = null):void {
 		server = new ServerSocket();
-	
-		try {
-			server.bind(ports[0]);
-			server.listen();
-		} catch (error:Error) {
-			dataStore.showAppMessage(" \"LogMaster76K\" fail to start!  error:" + error);
+
+		var connectPort:int = 0;
+		var isServerStarted:Boolean = false;
+		while (connectPort < ports.length && !isServerStarted) {
+			try {
+				server.bind(ports[connectPort]);
+				server.listen();
+				isServerStarted = true;
+			} catch (error:Error) {
+				dataStore.showAppMessage(" \"LogMaster76K\" fail to start!  error:" + error);
+				connectPort++;
+			}
 		}
-	
+
 		if (server.listening) {
-			dataStore.showAppMessage(" \"LogMaster76K\" sucsesifuly started!!!  (" + ports[0] + ")");
+			dataStore.showAppMessage(" \"LogMaster76K\" sucsesifuly started!!!  (" + ports[connectPort] + ")");
 		}
 		server.addEventListener(ServerSocketConnectEvent.CONNECT, handleConnect);
 		server.addEventListener(Event.CLOSE, handleClose);
@@ -86,8 +93,8 @@ public class ConnectionManager {
 		client.removeEventListener(Event.CLOSE, handleClientClose);
 		dataStore.killClient(client.id);
 
-		for (var i:uint = 0; i < sockets.length; i++){
-			if (sockets[i] == client){
+		for (var i:uint = 0; i < sockets.length; i++) {
+			if (sockets[i] == client) {
 				sockets.splice(i, 1);
 				break;
 			}

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a24b030a-a684-4dad-a1ad-72d2e2009baf" name="Default" comment="" />
+    <list default="true" id="a24b030a-a684-4dad-a1ad-72d2e2009baf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LogMasterApplication.as3proj" afterPath="$PROJECT_DIR$/LogMasterApplication.as3proj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.old" afterPath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.old" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.xml" afterPath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="LogMasterApplication.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.js2" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369974762463" ignored="false" />
-    <file path="/a.dummy" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369912363600" ignored="false" />
+    <file path="/fragment.js2" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374502825218" ignored="false" />
+    <file path="/a.dummy" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374501408627" ignored="false" />
     <file path="$PROJECT_DIR$/../../coltTest/coltTest_lccompc_flex_config.xml" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369943403229" ignored="false" />
     <file path="$PROJECT_DIR$/../../coltTest/coltTest_lcicompc_flex_config.xml" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369943343843" ignored="false" />
     <file path="$PROJECT_DIR$/../../coltTest/mvcSrc/mindScriptAct/mvcColt/Main.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369912630825" ignored="false" />
@@ -17,6 +27,13 @@
     <file path="/application.xml" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1370069293827" ignored="false" />
     <file path="/SetupSDK.bat" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369951022481" ignored="false" />
     <file path="/SetupApplication.bat" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369951534360" ignored="false" />
+    <file path="/Dummy.txt" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374502799270" ignored="false" />
+    <file path="/ClientSocket.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374502146262" ignored="false" />
+    <file path="/Storadge.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374501185776" ignored="false" />
+    <file path="/AppManager.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374500785605" ignored="false" />
+    <file path="/ConnectionManager.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374501616075" ignored="false" />
+    <file path="C:/!workSpace/production/src/main/flash/net/bigpoint/deprecated/game/view/components/world/PositionableSprite.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374503103018" ignored="false" />
+    <file path="/PositionableSprite.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374503096305" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +94,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="83" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.6314581">
+            <state line="33" column="83" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientSocket.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="49" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextPane.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/viewOld/TextPane.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="0" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Storadge.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="148" column="45" selection-start="4773" selection-end="4773" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppManager.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="12" selection-start="2955" selection-end="2955" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionManager.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="44" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,7 +151,34 @@
       <file leaf-file-name="Main-app.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main-app.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="12" selection-start="3648" selection-end="3771" vertical-scroll-proportion="0.0">
+            <state line="62" column="33" selection-start="3648" selection-end="3771" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateCertificate.bat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bat/CreateCertificate.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="46" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetupSDK.bat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bat/SetupSDK.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="36" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetupApplication.bat" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bat/SetupApplication.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="24" selection-start="342" selection-end="352" vertical-scroll-proportion="0.33398822">
               <folding />
             </state>
           </provider>
@@ -102,6 +191,14 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -110,16 +207,20 @@
         <option value="$PROJECT_DIR$/bat/SetupApplication.bat" />
         <option value="$PROJECT_DIR$/bin/application.xml" />
         <option value="$PROJECT_DIR$/application.xml" />
+        <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as" />
+        <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" />
+        <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" />
+        <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -145,6 +246,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -160,7 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
+              <option name="myItemId" value="LogMaster_application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -170,7 +272,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
+              <option name="myItemId" value="LogMaster_application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -184,7 +286,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="LogMaster_application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logmaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="LogMasterApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogMaster_application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logmaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogMasterApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogMaster_application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logmaster" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogMasterApplication" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogMaster_application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -202,35 +366,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="obj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
+              <option name="myItemId" value="LogMaster_application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -244,25 +380,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
+              <option name="myItemId" value="LogMaster_application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -272,23 +390,26 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mvcEpress-extension-workers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -444,6 +565,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a24b030a-a684-4dad-a1ad-72d2e2009baf" name="Default" comment="" />
@@ -453,25 +591,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26307365" sideWeight="0.6020067" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39696312" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27723378" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39677048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39677048" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -536,23 +674,15 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/Main.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/ApplicationFacade.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/Note.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -568,63 +698,91 @@
         <state line="8" column="35" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bat/SetupSDK.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bat/CreateCertificate.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bat/SetupApplication.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="342" selection-end="352" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/icons/icon_128x128.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/icons/icon_48x48.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/icons/icon_16x16.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/icons/icon_32x32.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bat/Packager.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="21" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/application.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/Render.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="8" selection-start="0" selection-end="1262" vertical-scroll-proportion="0.0">
+        <state line="322" column="21" selection-start="10146" selection-end="10146" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main-app.xml">
+    <entry file="jar://C:/flex_air_sdk_3.7/frameworks/libs/air/airglobal.swc!/library.swf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="12" selection-start="3648" selection-end="3771" vertical-scroll-proportion="0.0">
+        <state line="2161" column="109" selection-start="97198" selection-end="97198" vertical-scroll-proportion="0.19214876">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="12" selection-start="2955" selection-end="2955" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="45" selection-start="4773" selection-end="4773" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="83" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.6314581">
+        <state line="33" column="83" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="49" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/viewOld/TextPane.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="44" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main-app.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="33" selection-start="3648" selection-end="3771" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bat/CreateCertificate.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="46" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bat/SetupSDK.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bat/SetupApplication.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="24" selection-start="342" selection-end="352" vertical-scroll-proportion="0.33398822">
           <folding />
         </state>
       </provider>
