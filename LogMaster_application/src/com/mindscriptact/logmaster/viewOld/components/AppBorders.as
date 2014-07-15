@@ -19,7 +19,7 @@
  * 
  *********************************************************************/
 package com.mindscriptact.logmaster.viewOld.components {
-import com.mindscriptact.logmaster.core.AppManager;
+import com.mindscriptact.logmaster.core.StageMediator;
 import flash.display.NativeWindowResize;
 import flash.display.Sprite;
 import flash.events.MouseEvent;
@@ -56,14 +56,14 @@ public class AppBorders extends Sprite {
 		borderU = new AppBorderHBTN();		this.addChild(borderU);
 		borderB = new AppBorderHBTN();		this.addChild(borderB);
 		
-		cornecUL.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.TOP_LEFT);});
-		cornecUR.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.TOP_RIGHT);});
-		cornecBL.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.BOTTOM_LEFT);});
-		cornecBR.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.BOTTOM_RIGHT);});
-		borderL.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.LEFT);});
-		borderR.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.RIGHT);});
-		borderU.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.TOP);});
-		borderB.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {AppManager.startResize(NativeWindowResize.BOTTOM);});
+		cornecUL.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.TOP_LEFT);});
+		cornecUR.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.TOP_RIGHT);});
+		cornecBL.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.BOTTOM_LEFT);});
+		cornecBR.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.BOTTOM_RIGHT);});
+		borderL.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.LEFT);});
+		borderR.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.RIGHT);});
+		borderU.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.TOP);});
+		borderB.addEventListener(MouseEvent.MOUSE_DOWN, function (event:MouseEvent):void {StageMediator.startResize(NativeWindowResize.BOTTOM);});
 		
 		cornecUL.useHandCursor = //
 		cornecUR.useHandCursor = //

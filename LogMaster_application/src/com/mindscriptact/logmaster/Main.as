@@ -20,6 +20,7 @@
  *********************************************************************/
 package com.mindscriptact.logmaster {
 import flash.display.Sprite;
+import flash.display.Stage;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 
@@ -39,7 +40,8 @@ public class Main extends Sprite {
 		this.stage.scaleMode = StageScaleMode.NO_SCALE;
 		this.stage.align = StageAlign.TOP_LEFT;
 		//
-		ApplicationFacade.getInstance().startup(this.stage);
+		var mainModule:MainModule = new MainModule();
+		mainModule.start(this.stage);
 	}
 
 }

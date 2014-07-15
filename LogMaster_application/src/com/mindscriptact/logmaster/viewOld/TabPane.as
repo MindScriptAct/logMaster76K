@@ -19,7 +19,7 @@
  *
  *********************************************************************/
 package com.mindscriptact.logmaster.viewOld {
-import com.mindscriptact.logmaster.core.AppManager;
+import com.mindscriptact.logmaster.core.StageMediator;
 import com.mindscriptact.logmaster.dataOld.Storadge;
 import com.mindscriptact.logmaster.viewOld.components.LeverFilters;
 import com.mindscriptact.logmaster.viewOld.components.TabButton;
@@ -82,7 +82,7 @@ public class TabPane extends Sprite {
 	}
 
 	private function handleWindowMove(event:MouseEvent):void {
-		AppManager.startMove();
+		StageMediator.startMove();
 	}
 
 	/**
@@ -208,7 +208,7 @@ public class TabPane extends Sprite {
 
 	private function handleCloseaApp(event:MouseEvent):void {
 		//this.stage.root
-		AppManager.closeApp();
+		StageMediator.closeApp();
 	}
 
 	/**
@@ -226,7 +226,7 @@ public class TabPane extends Sprite {
 
 	CONFIG::debug
 	private function handleDebugSocket(event:MouseEvent):void {
-		AppManager.debugSocketStatus();
+		StageMediator.debugSocketStatus();
 	}
 }
 }

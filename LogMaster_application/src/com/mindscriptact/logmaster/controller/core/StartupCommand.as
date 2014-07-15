@@ -2,67 +2,67 @@
  Simple Command - PureMVC
  */
 package com.mindscriptact.logmaster.controller.core {
-import com.mindscriptact.logmaster.Note;
-import com.mindscriptact.logmaster.controller.app.SaveToClipboardCommand;
-import com.mindscriptact.logmaster.core.AppManager;
+import com.mindscriptact.logmaster.core.StageMediator;
+import com.mindscriptact.logmaster.core.StageRenderMediator;
 import com.mindscriptact.logmaster.dataOld.Storadge;
 import com.mindscriptact.logmaster.model.app.AppProxy;
-import com.mindscriptact.logmaster.model.storadge.StoradgeProxy;
+import com.mindscriptact.logmaster.model.storadge.StorageProxy;
 import com.mindscriptact.logmaster.net.ConnectionManager;
-import com.mindscriptact.logmaster.view.app.AppMediator;
 
 import flash.display.Stage;
 import flash.events.MouseEvent;
 import flash.text.TextField;
 import flash.text.TextFormat;
 
-import org.puremvc.as3.interfaces.INotification;
-import org.puremvc.as3.patterns.command.SimpleCommand;
+import mvcexpress.mvc.Command;
 
 /**
  * SimpleCommand
  */
-public class StartupCommand extends SimpleCommand {
+public class StartupCommand extends Command {
 	private var connectionMan:ConnectionManager;
 	private var appStage:Stage;
 	private var myTextField:TextField;
 
-	override public function execute(note:INotification):void {
+	public function execute(appStage:Stage):void {
 
 		//trace("StartupCommand.execute");
 
-		appStage = note.getBody() as Stage;
-
-		// Register proxies.
-		facade.registerProxy(new AppProxy());
-		facade.registerProxy(new StoradgeProxy());
-
-
-		// Register mediators.
-
-		AppManager, AppMediator;
-
-		// init application.
+		this.appStage = appStage;
 
 
 		/** Aplication state and data holder. */
 		// create data storadge.
 		var dataStore:Storadge = new Storadge();
 
+		// Register proxies.
+		proxyMap.map(new AppProxy());
+		proxyMap.map(new StorageProxy(dataStore));
+
+
+		// Register mediators.
+		//mediatorMap.map(AppManager, );
+
+		//mediatorMap.map(Stage, StageMediator);
+
+		// init application.
+
+
 		/** Aplication manager, (OS stuff..) */
-		// init app handling..
-		var appMan:AppManager = new AppManager(appStage, dataStore);
-		facade.registerMediator(appMan);
+			// init app handling..
+		mediatorMap.mediateWith(appStage, StageMediator);
+		mediatorMap.mediateWith(appStage, StageRenderMediator);
+
 		// init storadge;
 		dataStore.init();
 
-		/** Socket conection handling */
+		/** Socket connection handling */
 			// establish connection manager.
 		connectionMan = new ConnectionManager(dataStore);
 		//
 
 		CONFIG::debug {
-			appMan.debug_setConnectionMan(connectionMan);
+			StageMediator.debug_connectionMan = connectionMan;
 		}
 
 		myTextField = new TextField();
@@ -78,9 +78,6 @@ public class StartupCommand extends SimpleCommand {
 		newFormat.font = 'Verdana';
 
 		myTextField.setTextFormat(newFormat);
-
-
-		facade.registerCommand(Note.SEND_TO_CLIPBOARD, SaveToClipboardCommand);
 
 		appStage.addEventListener(MouseEvent.CLICK, startServer);
 	}
