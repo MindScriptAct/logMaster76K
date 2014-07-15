@@ -25,6 +25,7 @@ import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.events.ServerSocketConnectEvent;
 import flash.net.ServerSocket;
+import flash.net.Socket;
 
 /**
  * Opens server socket, manages client connection.
@@ -34,7 +35,7 @@ import flash.net.ServerSocket;
 public class ConnectionManager {
 	private var server:ServerSocket;
 
-	private var sockets:Vector.<ClientSocket> = new Vector.<ClientSocket>();
+	private var clients:Vector.<ClientSocket> = new Vector.<ClientSocket>();
 
 	// TODO : implement.
 	/** Ports to try to set server to. */
@@ -60,6 +61,7 @@ public class ConnectionManager {
 				server.bind(ports[connectPort]);
 				server.listen();
 				isServerStarted = true;
+				dataStore.showDebugAppMessage("Server binded to perceived:" + ports[connectPort] + " true:" + server.localPort);
 			} catch (error:Error) {
 				dataStore.showAppMessage(" \"LogMaster76K\" fail to start!  error:" + error);
 				connectPort++;
@@ -82,8 +84,9 @@ public class ConnectionManager {
 		//trace("ConnectionManager.handleConnect > event : " + event, event.socket);
 		var client:ClientSocket = new ClientSocket(event.socket, dataStore);
 		dataStore.registerClient(client.id);
-		this.sockets.push(client);
+		this.clients.push(client);
 		client.addEventListener(Event.CLOSE, handleClientClose);
+		//dataStore.showDebugAppMessage("Server accepted client connection!");
 	}
 
 	private function handleClientClose(event:Event):void {
@@ -93,12 +96,29 @@ public class ConnectionManager {
 		client.removeEventListener(Event.CLOSE, handleClientClose);
 		dataStore.killClient(client.id);
 
-		for (var i:uint = 0; i < sockets.length; i++) {
-			if (sockets[i] == client) {
-				sockets.splice(i, 1);
+		for (var i:uint = 0; i < clients.length; i++) {
+			if (clients[i] == client) {
+				clients.splice(i, 1);
 				break;
 			}
 		}
+	}
+
+	CONFIG::debug
+	public function getSocketStatus():String {
+		var retVal:String = "----------------------------- Socket status:" + "\n";
+		if (server) {
+			retVal += "Server socket:" + server + " listening:" + server.listening + " bound:" + server.bound + " " + server.localAddress + " " + server.localPort + "\n";
+		} else {
+
+			retVal += "Server socket:" + server + "\n";
+		}
+		for (var c:int = 0; c < clients.length; c++) {
+			var client:Socket = clients[c].debug_getSocket();
+			retVal += "Client socket:" + " id:" + clients[c].id + " connected:" + client.connected + " bytesAvailable:" + client.bytesAvailable + " bytesPending:" + client.bytesPending + " " + client.localAddress + " " + client.localPort + " " + client.endian + "\n";
+		}
+		retVal += "-----------------------------------------------" + "\n";
+		return retVal;
 	}
 }
 }

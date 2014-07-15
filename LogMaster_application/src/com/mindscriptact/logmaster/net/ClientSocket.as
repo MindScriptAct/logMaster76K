@@ -19,7 +19,6 @@
  *
  *********************************************************************/
 package com.mindscriptact.logmaster.net {
-import com.mindscriptact.logmaster.dataOld.message.MessageData;
 import com.mindscriptact.logmaster.dataOld.Storadge;
 
 import flash.events.Event;
@@ -60,25 +59,34 @@ public class ClientSocket extends EventDispatcher {
 		this.dataStore = dataStore;
 		socket.addEventListener(Event.CONNECT, handleClientConnect);
 		socket.addEventListener(Event.CLOSE, handleClientClose);
-		socket.addEventListener(IOErrorEvent.IO_ERROR, handleClientError);
-		socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, handleClientError);
+
 		socket.addEventListener(ProgressEvent.SOCKET_DATA, handleClientData);
 
-//		socket.addEventListener(Event.ACTIVATE, handleSocketEvent)
-//		socket.addEventListener(Event.DEACTIVATE, handleSocketEvent)
-//		socket.addEventListener(Event.CLOSE, handleSocketEvent)
-//		socket.addEventListener(Event.CONNECT, handleSocketEvent)
-		socket.addEventListener(IOErrorEvent.IO_ERROR, handleSocketEvent, false, 0, true);
-		socket.addEventListener(OutputProgressEvent.OUTPUT_PROGRESS, handleSocketEvent, false, 0, true);
-		//socket.addEventListener(ProgressEvent.SOCKET_DATA, handleSocketEvent, false, 0, true);
-		socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, handleSocketEvent, false, 0, true);
+		socket.addEventListener(IOErrorEvent.IO_ERROR, handleClientError);
+		socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, handleClientError);
 
-		dataStore.showDebugAppMessage("client connected.");
+
+		CONFIG::debug {
+			// debug stuff
+			//socket.addEventListener(Event.ACTIVATE, handleSocketEvent)
+			//socket.addEventListener(Event.DEACTIVATE, handleSocketEvent)
+			//socket.addEventListener(Event.CLOSE, handleSocketEvent)
+			//socket.addEventListener(Event.CONNECT, handleSocketEvent)
+			socket.addEventListener(OutputProgressEvent.OUTPUT_PROGRESS, handleSocketEvent, false, 0, true);
+			socket.addEventListener(IOErrorEvent.IO_ERROR, handleSocketEvent, false, 0, true);
+			socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, handleSocketEvent, false, 0, true);
+			socket.addEventListener(ProgressEvent.SOCKET_DATA, handleSocketEvent, false, 0, true);
+
+			dataStore.showDebugAppMessage("client connected.");
+
+		}
 	}
 
 	private function handleSocketEvent(event:Event):void {
 		trace(event.type);
-		dataStore.showDebugAppMessage("client event: " + event.type + " " + event);
+		if (dataStore) {
+			dataStore.showDebugAppMessage("client event: " + event.type + " " + event);
+		}
 	}
 
 	private function handleClientClose(event:Event):void {
@@ -198,6 +206,11 @@ public class ClientSocket extends EventDispatcher {
 
 	public function get id():int {
 		return _id;
+	}
+
+	CONFIG::debug
+	public function debug_getSocket():Socket {
+		return socket;
 	}
 }
 }

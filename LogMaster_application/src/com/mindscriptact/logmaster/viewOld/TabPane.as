@@ -1,28 +1,29 @@
 ﻿/*********************************************************************
  *  Copyright (C) 2010 by Raimundas Banevicius (raima156@yahoo.com)
- * 
- * 
- *	This file is part of LogMaster76K.
  *
- *	LogMaster76K is free software: you can redistribute it and/or modify
- *	it under the terms of the GNU General Public License as published by
- *	the Free Software Foundation, either version 3 of the License, or
- *	(at your option) any later version.
- *	
- *	LogMaster76K is distributed in the hope that it will be useful,
- *	but WITHOUT ANY WARRANTY; without even the implied warranty of
- *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *	GNU General Public License for more details.
- *	
- *	You should have received a copy of the GNU General Public License
- *	along with LogMaster76K.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
+ *    This file is part of LogMaster76K.
+ *
+ *    LogMaster76K is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    LogMaster76K is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with LogMaster76K.  If not, see <http://www.gnu.org/licenses/>.
+ *
  *********************************************************************/
 package com.mindscriptact.logmaster.viewOld {
 import com.mindscriptact.logmaster.core.AppManager;
 import com.mindscriptact.logmaster.dataOld.Storadge;
 import com.mindscriptact.logmaster.viewOld.components.LeverFilters;
 import com.mindscriptact.logmaster.viewOld.components.TabButton;
+
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
@@ -39,24 +40,27 @@ public class TabPane extends Sprite {
 	private var titleBar:WindowTitleBarSPR = new WindowTitleBarSPR();
 
 	private var closeTabButton:TabCloseUpSPR;
-	
+
 	private var levelFilters:LeverFilters;
 
 	private var tabs:Vector.<TabButton> = new Vector.<TabButton>();
 
 	private var closeButton:CloseBTN = new CloseBTN();
 
+	CONFIG::debug
+	private var debugButton:CloseBTN = new CloseBTN();
+
 	public var paneWidth:int = 800;
 
 	public var paneHeight:int = 30;
-	
-	public function TabPane(dataStore:Storadge){
+
+	public function TabPane(dataStore:Storadge) {
 		this.dataStore = dataStore;
-				
+
 		this.addChild(titleBar);
 		titleBar.addEventListener(MouseEvent.MOUSE_DOWN, handleWindowMove);
-		
-		
+
+
 		closeTabButton = new TabCloseUpSPR();
 		this.addChild(closeTabButton);
 		closeTabButton.visible = false;
@@ -65,21 +69,26 @@ public class TabPane extends Sprite {
 		//
 		addChild(closeButton);
 		closeButton.addEventListener(MouseEvent.CLICK, handleCloseaApp);
-		
-		
+
+
+		CONFIG::debug {
+			addChild(debugButton);
+			debugButton.addEventListener(MouseEvent.CLICK, handleDebugSocket);
+		}
+
 		levelFilters = new LeverFilters();
 		addChild(levelFilters);
 
 	}
-	
+
 	private function handleWindowMove(event:MouseEvent):void {
 		AppManager.startMove();
 	}
 
 	/**
 	 * Handle app resize.
-	 * @param	windowWidth
-	 * @param	windowHeigth
+	 * @param    windowWidth
+	 * @param    windowHeigth
 	 */
 	public function resize(windowWidth:int, windowHeight:int):void {
 		this.paneWidth = windowWidth;
@@ -89,9 +98,16 @@ public class TabPane extends Sprite {
 		closeButton.x = windowWidth - 20 - 5;
 		closeButton.y = 5;
 		//
+		CONFIG::debug {
+			debugButton.rotation = 45;
+			debugButton.x = closeButton.x - 20;
+			debugButton.y = 5;
+		}
+
+		//
 		levelFilters.x = windowWidth - 20 - 5 - 10 - levelFilters.width;
 		levelFilters.y = 14;
-		
+
 	}
 
 	/**
@@ -120,8 +136,8 @@ public class TabPane extends Sprite {
 	public function renameTab(tabId:int, titleName:String):void {
 		////trace("TabPane.renameTab > tabId : " + tabId + ", titleName : " + titleName);
 
-		for each (var value:TabButton in tabs){
-			if (value.id == tabId){
+		for each (var value:TabButton in tabs) {
+			if (value.id == tabId) {
 				value.setTitle(titleName);
 			}
 		}
@@ -136,7 +152,7 @@ public class TabPane extends Sprite {
 		} else {
 			dataStore.openTab(tabId);
 
-			if (tabId != 0){
+			if (tabId != 0) {
 				showTabcloseTabButtonAt(event.target as TabButton);
 			}
 		}
@@ -152,7 +168,7 @@ public class TabPane extends Sprite {
 		////trace("TabPane.handleTabMouseOver > event : " + event);
 		var tabId:int = (event.target as TabButton).id;
 
-		if (tabId != 0 && tabId == dataStore.activeTabId){
+		if (tabId != 0 && tabId == dataStore.activeTabId) {
 			showTabcloseTabButtonAt(event.target as TabButton);
 		}
 	}
@@ -174,9 +190,9 @@ public class TabPane extends Sprite {
 		// TODO : implement
 		var tabDeleted:Boolean = false;
 
-		for (var i:int = 0; i < tabs.length; i++){
-			if (!tabDeleted){
-				if (tabs[i].id == tabId){
+		for (var i:int = 0; i < tabs.length; i++) {
+			if (!tabDeleted) {
+				if (tabs[i].id == tabId) {
 					this.removeChild(tabs[i]);
 					tabs[i].dispose();
 					tabs.splice(i, 1);
@@ -194,11 +210,11 @@ public class TabPane extends Sprite {
 		//this.stage.root
 		AppManager.closeApp();
 	}
-	
+
 	/**
 	 * Make tab active.
 	 */
-	public function activateTab(tabId:int) : void {
+	public function activateTab(tabId:int):void {
 		for (var i:int = 0; i < tabs.length; i++) {
 			if (tabs[i].id == tabId) {
 				tabs[i].changeState(TabButton.STATE_ACTIVE);
@@ -206,6 +222,11 @@ public class TabPane extends Sprite {
 				tabs[i].changeState(TabButton.STATE_PASSIVE);
 			}
 		}
+	}
+
+	CONFIG::debug
+	private function handleDebugSocket(event:MouseEvent):void {
+		AppManager.debugSocketStatus();
 	}
 }
 }
