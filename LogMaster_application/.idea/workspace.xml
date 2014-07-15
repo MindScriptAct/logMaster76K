@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24b030a-a684-4dad-a1ad-72d2e2009baf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LogMasterApplication.as3proj" afterPath="$PROJECT_DIR$/LogMasterApplication.as3proj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.old" afterPath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.old" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.xml" afterPath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.xml" afterPath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" afterPath="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" />
+      <change type="MODIFICATION" beforePath="C:\!workspace\libs\logMaster76K\LogMaster_application\src\com\mindscriptact\logmaster\core\AppManager.as" afterPath="C:\!workspace\libs\logMaster76K\LogMaster_application\src\com\mindscriptact\logmaster\core\AppManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.old" afterPath="$PROJECT_DIR$/obj/LogMasterApplicationConfig.old" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LogMasterApplication.as3proj" afterPath="$PROJECT_DIR$/LogMasterApplication.as3proj" />
     </list>
     <ignored path="LogMasterApplication.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.js2" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374502825218" ignored="false" />
+    <file path="/fragment.js2" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405431964082" ignored="false" />
     <file path="/a.dummy" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374501408627" ignored="false" />
     <file path="$PROJECT_DIR$/../../coltTest/coltTest_lccompc_flex_config.xml" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369943403229" ignored="false" />
     <file path="$PROJECT_DIR$/../../coltTest/coltTest_lcicompc_flex_config.xml" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1369943343843" ignored="false" />
@@ -32,8 +32,30 @@
     <file path="/Storadge.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374501185776" ignored="false" />
     <file path="/AppManager.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374500785605" ignored="false" />
     <file path="/ConnectionManager.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374501616075" ignored="false" />
-    <file path="C:/!workSpace/production/src/main/flash/net/bigpoint/deprecated/game/view/components/world/PositionableSprite.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374503103018" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../production/src/main/flash/net/bigpoint/deprecated/game/view/components/world/PositionableSprite.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374503103018" ignored="false" />
     <file path="/PositionableSprite.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1374503096305" ignored="false" />
+    <file path="/MvcExpress.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405430531340" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKing/londonswitcherTrunk/client/src/com/king/apps/londonswitcher/switcher/event/SwappableDraggedEvent.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405430615763" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/src/com/king/apps/farmking/switcher/controller/companion/HandleCompanionCommand.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405443168120" ignored="false" />
+    <file path="/HandleCompanionCommand.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405443157225" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmTempClasses/MyReferencesAnimalPrototype.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405441076039" ignored="false" />
+    <file path="/MyReferencesAnimalPrototype.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405431574427" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/src/com/king/apps/farmking/switcher/controller/companion/TrigerFakeShovelEvent.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405432025455" ignored="false" />
+    <file path="/TrigerFakeShovelEvent.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405432008480" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/resources/animals.json" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405440464043" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/src/com/king/apps/farmking/switcher/view/playback/step/LoseHealthHelper.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405436281969" ignored="false" />
+    <file path="/LoseHealthHelper.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405436252639" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/src/com/king/apps/farmking/switcher/event/effect/ShovelBoosterEffectEvent.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405437749272" ignored="false" />
+    <file path="/ShovelBoosterEffectEvent.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405437432331" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/src/com/king/apps/farmking/switcher/view/SwitcherViewMediator.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405439229369" ignored="false" />
+    <file path="/SwitcherViewMediator.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405437559664" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/src/com/king/apps/farmking/switcher/view/playback/step/effect/ShovelBoosterPlaybackStep.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405437600065" ignored="false" />
+    <file path="/ShovelBoosterPlaybackStep.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405437592698" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKing/londonswitcherTrunk/client/src/com/king/apps/londonswitcher/switcher/model/ItemTargetProgress.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405441599220" ignored="false" />
+    <file path="/ItemTargetProgress.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405441555132" ignored="false" />
+    <file path="/TextPane.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405441888333" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../farmKingHg/game/canvas/client/src/com/king/apps/farmking/switcher/model/effect/RemoveAllItemsWithSameIdMatchEffect.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405442746175" ignored="false" />
+    <file path="/RemoveAllItemsWithSameIdMatchEffect.as" changelist="a24b030a-a684-4dad-a1ad-72d2e2009baf" time="1405442724199" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +119,7 @@
       <file leaf-file-name="application.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="83" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
+            <state line="33" column="26" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,16 +128,25 @@
       <file leaf-file-name="ClientSocket.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="49" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.0">
+            <state line="67" column="0" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextPane.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TextPane.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/viewOld/TextPane.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="0" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0">
+            <state line="80" column="85" selection-start="2747" selection-end="2747" vertical-scroll-proportion="0.2693662">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StageRenderMediator.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/StageRenderMediator.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="249" column="10" selection-start="8435" selection-end="8435" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,16 +155,7 @@
       <file leaf-file-name="Storadge.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="45" selection-start="4773" selection-end="4773" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppManager.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="12" selection-start="2955" selection-end="2955" vertical-scroll-proportion="0.0">
+            <state line="148" column="9" selection-start="4773" selection-end="4773" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,43 +164,43 @@
       <file leaf-file-name="ConnectionManager.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="44" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
+            <state line="56" column="32" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main-app.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main-app.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="33" selection-start="3648" selection-end="3771" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateCertificate.bat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bat/CreateCertificate.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="46" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SetupSDK.bat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bat/SetupSDK.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="36" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SetupApplication.bat" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SetupApplication.bat" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bat/SetupApplication.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="24" selection-start="342" selection-end="352" vertical-scroll-proportion="0.33398822">
+            <state line="17" column="19" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainModule.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/MainModule.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="1" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MvcExpress.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libSrc/mvcexpress/MvcExpress.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="10" selection-start="3385" selection-end="3385" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModuleManager.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libSrc/mvcexpress/core/ModuleManager.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="0" selection-start="2284" selection-end="2284" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,14 +233,15 @@
         <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as" />
         <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as" />
         <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as" />
+        <option value="$PROJECT_DIR$/libSrc/mvcexpress/MvcExpress.as" />
+        <option value="$PROJECT_DIR$/src/com/mindscriptact/logmaster/viewOld/TextPane.as" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1936" />
+    <option name="height" value="1175" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -246,8 +269,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,68 +311,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logmaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMaster_application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logmaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMaster_application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logmaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMasterApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LogMaster_application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -370,7 +329,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,6 +349,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -591,24 +552,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="0" width="1936" height="1175" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33017975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27723378" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39677048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34471717" sideWeight="0.60531497" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39468503" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39677048" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -683,9 +644,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/Note.as">
+    <entry file="file://$PROJECT_DIR$/bat/SetupApplication.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="10" column="24" selection-start="342" selection-end="352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/Main.as">
@@ -693,96 +656,94 @@
         <state line="34" column="48" selection-start="1280" selection-end="1288" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/ApplicationFacade.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bat/Packager.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="21" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/Render.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="21" selection-start="10146" selection-end="10146" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/flex_air_sdk_3.7/frameworks/libs/air/airglobal.swc!/library.swf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2161" column="109" selection-start="97198" selection-end="97198" vertical-scroll-proportion="0.19214876">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/AppManager.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="12" selection-start="2955" selection-end="2955" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/dataOld/Storadge.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="45" selection-start="4773" selection-end="4773" vertical-scroll-proportion="0.0">
+        <state line="148" column="9" selection-start="4773" selection-end="4773" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="83" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
+        <state line="33" column="26" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ClientSocket.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="49" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/viewOld/TextPane.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="0" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0">
+        <state line="67" column="0" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/net/ConnectionManager.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="44" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
+        <state line="56" column="32" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main-app.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="33" selection-start="3648" selection-end="3771" vertical-scroll-proportion="0.0">
+        <state line="62" column="31" selection-start="3648" selection-end="3771" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bat/CreateCertificate.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="46" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="46" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bat/SetupSDK.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bat/SetupApplication.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="342" selection-end="352" vertical-scroll-proportion="0.33398822">
+        <state line="17" column="19" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/MainModule.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libSrc/mvcexpress/MvcExpress.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="10" selection-start="3385" selection-end="3385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libSrc/mvcexpress/core/ModuleManager.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="0" selection-start="2284" selection-end="2284" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/core/StageRenderMediator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="249" column="10" selection-start="8435" selection-end="8435" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mindscriptact/logmaster/viewOld/TextPane.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="85" selection-start="2747" selection-end="2747" vertical-scroll-proportion="0.2693662">
           <folding />
         </state>
       </provider>

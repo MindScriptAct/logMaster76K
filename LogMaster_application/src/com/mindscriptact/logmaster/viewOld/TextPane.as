@@ -78,6 +78,10 @@ public class TextPane extends Sprite {
 		this._paneWidth = paneWidth;
 		this._paneHeight = paneHeight;
 		var lineCountNeeded:int = Math.floor(paneHeight / lineHeight);
+		// FIXME: paneHeight returned negative number after long time of use.. WHY!!!
+		if(lineCountNeeded < 1){
+			lineCountNeeded = 1;
+		}
 		var renderLastLine:TextLine = _firstLine;
 
 		if (_lineCount < lineCountNeeded){
