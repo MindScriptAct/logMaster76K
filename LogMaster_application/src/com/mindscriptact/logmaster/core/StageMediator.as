@@ -19,6 +19,7 @@
  *
  *********************************************************************/
 package com.mindscriptact.logmaster.core {
+import com.mindscriptact.logmaster.Main;
 import com.mindscriptact.logmaster.dataOld.Storadge;
 import com.mindscriptact.logmaster.messages.Message;
 import com.mindscriptact.logmaster.model.app.AppProxy;
@@ -30,6 +31,7 @@ import flash.display.Stage;
 import flash.events.InvokeEvent;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
+import flash.events.UncaughtErrorEvent;
 import flash.system.System;
 import flash.ui.Keyboard;
 
@@ -42,7 +44,7 @@ import mvcexpress.mvc.Mediator;
 public class StageMediator extends Mediator {
 
 	[Inject]
-	public var view:Stage;
+	public var view:Main;
 
 	[Inject]
 	public var appProxy:AppProxy;
@@ -64,9 +66,11 @@ public class StageMediator extends Mediator {
 		StageMediator.app = NativeApplication.nativeApplication;
 		StageMediator.app.addEventListener(InvokeEvent.INVOKE, handleResize);
 
-		view.addEventListener(KeyboardEvent.KEY_UP, handleKeyUp);
-		view.addEventListener(KeyboardEvent.KEY_DOWN, handleKeyDown);
-		view.addEventListener(MouseEvent.MOUSE_WHEEL, handleMouseWheelEvent);
+		view.stage.addEventListener(KeyboardEvent.KEY_UP, handleKeyUp);
+		view.stage.addEventListener(KeyboardEvent.KEY_DOWN, handleKeyDown);
+		view.stage.addEventListener(MouseEvent.MOUSE_WHEEL, handleMouseWheelEvent);
+
+		view.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, handleUncaughtError);
 	}
 
 	private function handleResize(event:InvokeEvent):void {
@@ -163,8 +167,9 @@ public class StageMediator extends Mediator {
 		}
 	}
 
-
-
+	private function handleUncaughtError(event:UncaughtErrorEvent):void {
+		sendMessage(Message.UNCAUGHT_ERROR, event);
+	}
 
 	CONFIG::debug
 	public static function debugSocketStatus():void {

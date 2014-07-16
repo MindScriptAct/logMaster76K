@@ -41,7 +41,7 @@ public class Main extends Sprite {
 		this.stage.align = StageAlign.TOP_LEFT;
 		//
 		var mainModule:MainModule = new MainModule();
-		mainModule.start(this.stage);
+		mainModule.start(this);
 	}
 
 }

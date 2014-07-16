@@ -6,6 +6,10 @@ package com.mindscriptact.logmaster.messages {
  */
 public class Message {
 
+	//
+	public static const UNCAUGHT_ERROR:String = "UNCAUGHT_ERROR";
+
+	//
 	static public const RESIZE_APP:String = "resizeApp" // resizes application window.
 
 	// scroll

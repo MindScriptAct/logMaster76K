@@ -227,6 +227,8 @@ public class TabPane extends Sprite {
 	CONFIG::debug
 	private function handleDebugSocket(event:MouseEvent):void {
 		StageMediator.debugSocketStatus();
+
+		//throw Error("uncaught error test...");
 	}
 }
 }

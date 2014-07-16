@@ -19,5 +19,8 @@ public class StorageProxy extends Proxy {
 		return dataStore;
 	}
 
+	public function showDebugAppMessage(data:String, debugId:int = 0):void {
+		dataStore.showDebugAppMessage(data, debugId);
+	}
 }
 }
