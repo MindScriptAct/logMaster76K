@@ -185,18 +185,16 @@ public class DebugMan {
 	 */
 	static public function renameTab(tabId:int, name:String):void {
 		//trace("DebugMan.changeTab > tabId : " + tabId + ", name : " + name);
-		RawMan.sendRowData("<cmd tabId='" + int(tabId) + "' name='" + escape(name) + "'><![CDATA[renameTab</cmd>");
+		RawMan.sendRowData("<cmd tabId='" + int(tabId) + "' name='" + escape(name) + "'><![CDATA[renameTab]]></cmd>");
 	}
 
 
 	static public function enableTabs(tabs:Array):void {
-		RawMan.sendRowData("<cmd tabIds='" + tabs + "' ><![CDATA[enableTabs</cmd>");
-
+		RawMan.sendRowData("<cmd tabIds='" + tabs + "' ><![CDATA[enableTabs]]></cmd>");
 	}
 
 	static public function disableTabs(tabs:Array):void {
-		RawMan.sendRowData("<cmd tabIds='" + tabs + "'><![CDATA[disableTabs</cmd>");
-
+		RawMan.sendRowData("<cmd tabIds='" + tabs + "'><![CDATA[disableTabs]]></cmd>");
 	}
 }
 }
