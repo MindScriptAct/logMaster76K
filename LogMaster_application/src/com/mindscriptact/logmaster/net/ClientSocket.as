@@ -83,7 +83,7 @@ public class ClientSocket extends EventDispatcher {
 	}
 
 	private function handleSocketEvent(event:Event):void {
-		trace(event.type);
+		//trace("ClientSocket.handleClientClose > "+event.type);
 		if (dataStore) {
 			dataStore.showDebugAppMessage("client event: " + event.type + " " + event);
 		}

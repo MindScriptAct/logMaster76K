@@ -58,6 +58,8 @@ public class Storadge extends EventDispatcher {
 
 	private var _activeTabId:int = 0;
 
+	private var countLines : uint = 1;
+
 	public function Storadge():void {
 		if (instance) {
 			throw Error("Error: Instantiation failed: this class ment to be initiated only once.(By main class.)");
@@ -134,6 +136,10 @@ public class Storadge extends EventDispatcher {
 		//trace("Storadge.showAppMessage > data : " + data);
 		var messageData:MessageData = new MessageData();
 		messageData.msgText = Vector.<String>([data]);
+		if(countLines){
+			countLines++;
+			messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
+		}
 		tabDataStore[0].log.push(messageData);
 
 		if (_activeTabId == 0) {
@@ -160,6 +166,10 @@ public class Storadge extends EventDispatcher {
 		if (!tabDataStore[debugTabId]) {
 			createTab(debugTabId, "SELF-DEBUG");
 		}
+		if(countLines){
+			countLines++;
+			messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
+		}
 		tabDataStore[debugTabId].log.push(messageData);
 
 		if (_activeTabId == debugTabId) {
@@ -175,6 +185,10 @@ public class Storadge extends EventDispatcher {
 		//trace(">>>Storadge.parseTextData > clientId : " + clientId + ", data : " + data);
 		var messageData:MessageData = new MessageData();
 		messageData.msgText = Vector.<String>([data]);
+		if(countLines){
+			countLines++;
+			messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
+		}
 		tabDataStore[clientTargetTab[clientId]].log.push(messageData);
 
 		if (_activeTabId == clientTargetTab[clientId]) {
@@ -268,6 +282,10 @@ public class Storadge extends EventDispatcher {
 				}
 				messageData.msgText.push(messagePartText);
 
+			}
+			if(countLines){
+				countLines++;
+				messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
 			}
 			tabDataStore[targetTabId].log.push(messageData);
 
