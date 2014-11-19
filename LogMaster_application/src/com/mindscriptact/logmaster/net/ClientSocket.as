@@ -115,7 +115,7 @@ public class ClientSocket extends EventDispatcher {
 	}
 
 	private function parse():void {
-		//trace("###### ClientSocket.parse " + data);
+		//trace("---###>>>>> ClientSocket.parse " + data);
 		var endPoss:int;
 
 		// TODO : check for fastest string search implementation.
@@ -182,6 +182,16 @@ public class ClientSocket extends EventDispatcher {
 
 				if (endPoss == 0) {
 					////trace("#### EMTY NEW LINE FOUND, REMOVED. ");
+					newDataParsed = true;
+				}
+
+				// ERROR HANDLING!!!
+				// FIXME : Find why this is possible.
+				var errorPos:int = data.indexOf("</msg>");
+				if(errorPos >= 0){
+					var errorousText:String =  data.substr(0, errorPos + 6);
+					data = data.substring(errorPos + 6);
+					dataStore.showDebugAppMessage(errorousText, 2);
 					newDataParsed = true;
 				}
 				data = data.substring(endPoss + 1);

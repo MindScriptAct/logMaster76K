@@ -68,7 +68,8 @@ public class TextLine extends TextLineSPR {
 	 *
 	 */
 	public function dispose():void {
-		bgColorTransform = null;
+		// FIXME: causes error(NULL POINTER) then closing/resizing tab. for watever reasons firs line becomes disposed one..
+		//bgColorTransform = null;
 		nextLine = null;
 		bgColors = null;
 	}

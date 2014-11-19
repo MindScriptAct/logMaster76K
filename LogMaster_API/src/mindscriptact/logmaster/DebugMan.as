@@ -153,7 +153,7 @@ public class DebugMan {
 	static public function log(data:String, level:int = 0, tabId:int = -1, textStyle:int = -1, textColor:int = -1, bgColor:Array = null):void {
 		RawMan.sendRowData("<msg"
 							+" level='" + level + "'"
-							+ ((textStyle >= 0)	?	(	  " bold='" + int(!(textStyle % TEXT_STYLE_BOLD)) + "'"
+							+ ((textStyle > 0)	?	(	  " bold='" + int(!(textStyle % TEXT_STYLE_BOLD)) + "'"
 														+ " italic='" + int(!(textStyle % TEXT_STYLE_ITALIC)) + "'"
 														+ " underline='" + int(!(textStyle % TEXT_STYLE_UNDERLINE)) + "'"
 													)
@@ -196,5 +196,6 @@ public class DebugMan {
 	static public function disableTabs(tabs:Array):void {
 		RawMan.sendRowData("<cmd tabIds='" + tabs + "'><![CDATA[disableTabs]]></cmd>");
 	}
+
 }
 }

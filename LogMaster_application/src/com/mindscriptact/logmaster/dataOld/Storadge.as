@@ -19,7 +19,8 @@
  *
  *********************************************************************/
 package com.mindscriptact.logmaster.dataOld {
-import com.mindscriptact.logmaster.dataOld.message.MessageData;
+	import com.mindscriptact.logmaster.dataOld.Storadge;
+	import com.mindscriptact.logmaster.dataOld.message.MessageData;
 import com.mindscriptact.logmaster.dataOld.settings.Settings;
 import com.mindscriptact.logmaster.event.MessageEvent;
 import com.mindscriptact.logmaster.event.TabEvent;
@@ -42,8 +43,7 @@ public class Storadge extends EventDispatcher {
 
 
 	/** Dictienary that contains tab data by id. */
-	private var tabDataStore:Dictionary = new Dictionary();
-	/** of TabData by int. */
+	private var tabDataStore:Dictionary = new Dictionary();	//* of TabData by int. */
 
 	/** Stores tab id, witch is used for client outputs as fefault */
 	private var clientTargetTab:Dictionary = new Dictionary();
@@ -58,7 +58,9 @@ public class Storadge extends EventDispatcher {
 
 	private var _activeTabId:int = 0;
 
-	private var countLines : uint = 1;
+	CONFIG::debug
+	static private var debug_countLines:int = 1;
+	private var maxMessageCount : int = 100000;
 
 	public function Storadge():void {
 		if (instance) {
@@ -136,11 +138,8 @@ public class Storadge extends EventDispatcher {
 		//trace("Storadge.showAppMessage > data : " + data);
 		var messageData:MessageData = new MessageData();
 		messageData.msgText = Vector.<String>([data]);
-		if(countLines){
-			countLines++;
-			messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
-		}
-		tabDataStore[0].log.push(messageData);
+
+		addTabMessage(0, messageData);
 
 		if (_activeTabId == 0) {
 			dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, 0));
@@ -156,7 +155,9 @@ public class Storadge extends EventDispatcher {
 		var debugTabId:int = int.MAX_VALUE - 100 - debugId;
 
 		if (!tabDataStore[debugTabId]) {
-			if (debugId == 1) {
+			if (debugId == 2) {
+				createTab(debugTabId, "[-FAILED_MSG-]");
+			} else if (debugId == 1) {
 				createTab(debugTabId, "[-UNCAUGHT_ERROR-]");
 			} else {
 				createTab(debugTabId, "[-SELF-DEBUG-]");
@@ -166,12 +167,7 @@ public class Storadge extends EventDispatcher {
 		if (!tabDataStore[debugTabId]) {
 			createTab(debugTabId, "SELF-DEBUG");
 		}
-		if(countLines){
-			countLines++;
-			messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
-		}
-		tabDataStore[debugTabId].log.push(messageData);
-
+		addTabMessage(debugTabId, messageData);
 		if (_activeTabId == debugTabId) {
 			dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, debugTabId));
 			dispatchEvent(new MessageEvent(MessageEvent.MESSAGE_UPDATE, tabDataStore[debugTabId].log));
@@ -185,11 +181,8 @@ public class Storadge extends EventDispatcher {
 		//trace(">>>Storadge.parseTextData > clientId : " + clientId + ", data : " + data);
 		var messageData:MessageData = new MessageData();
 		messageData.msgText = Vector.<String>([data]);
-		if(countLines){
-			countLines++;
-			messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
-		}
-		tabDataStore[clientTargetTab[clientId]].log.push(messageData);
+
+		addTabMessage(clientTargetTab[clientId], messageData);
 
 		if (_activeTabId == clientTargetTab[clientId]) {
 			dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, _activeTabId));
@@ -283,11 +276,8 @@ public class Storadge extends EventDispatcher {
 				messageData.msgText.push(messagePartText);
 
 			}
-			if(countLines){
-				countLines++;
-				messageData.msgText[messageData.msgText.length-1] += "   -="+countLines+"=-";
-			}
-			tabDataStore[targetTabId].log.push(messageData);
+
+			addTabMessage(targetTabId, messageData);
 
 			if (_activeTabId == targetTabId) {
 				dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, _activeTabId));
@@ -325,6 +315,24 @@ public class Storadge extends EventDispatcher {
 			default:
 				showAppMessage("WARNING : Unknown command : " + xmlData.toString())
 				break;
+		}
+	}
+
+	[Inline]
+	final private function addTabMessage(tabId : int, messageData : MessageData) : void
+	{
+		if (CONFIG::debug) {
+			if(debug_countLines){
+				debug_countLines++;
+				messageData.msgText[messageData.msgText.length-1] += "   -="+debug_countLines+"=-";
+			}
+		}
+		var log:Vector.<MessageData>= tabDataStore[tabId].log;
+		log.push(messageData);
+		if(maxMessageCount > 0){
+		    if(log.length > maxMessageCount){
+			    log.shift();
+		    }
 		}
 	}
 

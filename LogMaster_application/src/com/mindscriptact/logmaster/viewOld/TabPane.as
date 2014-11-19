@@ -60,6 +60,9 @@ public class TabPane extends Sprite {
 		this.addChild(titleBar);
 		titleBar.addEventListener(MouseEvent.MOUSE_DOWN, handleWindowMove);
 
+		titleBar.doubleClickEnabled = true;
+		titleBar.addEventListener(MouseEvent.DOUBLE_CLICK, handleDoubleClick);
+
 
 		closeTabButton = new TabCloseUpSPR();
 		this.addChild(closeTabButton);
@@ -83,6 +86,10 @@ public class TabPane extends Sprite {
 
 	private function handleWindowMove(event:MouseEvent):void {
 		StageMediator.startMove();
+	}
+
+	private function handleDoubleClick(event : MouseEvent) : void {
+		StageMediator.toggleMaximize();
 	}
 
 	/**

@@ -27,8 +27,11 @@ import com.mindscriptact.logmaster.model.storadge.StorageProxy;
 import com.mindscriptact.logmaster.net.ConnectionManager;
 
 import flash.desktop.NativeApplication;
-import flash.display.Stage;
-import flash.events.InvokeEvent;
+	import flash.display.NativeWindow;
+	import flash.display.NativeWindowDisplayState;
+	import flash.display.Stage;
+	import flash.display.StageDisplayState;
+	import flash.events.InvokeEvent;
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;
 import flash.events.UncaughtErrorEvent;
@@ -52,6 +55,8 @@ public class StageMediator extends Mediator {
 	/** */
 	static private var app:NativeApplication;
 
+	static private var nativeWin : NativeWindow;
+
 	static private var dataStore:Storadge;
 
 	CONFIG::debug
@@ -65,6 +70,8 @@ public class StageMediator extends Mediator {
 		StageMediator.dataStore = dataStore;
 		StageMediator.app = NativeApplication.nativeApplication;
 		StageMediator.app.addEventListener(InvokeEvent.INVOKE, handleResize);
+
+		StageMediator.nativeWin = view.stage.nativeWindow;
 
 		view.stage.addEventListener(KeyboardEvent.KEY_UP, handleKeyUp);
 		view.stage.addEventListener(KeyboardEvent.KEY_DOWN, handleKeyDown);
@@ -99,6 +106,16 @@ public class StageMediator extends Mediator {
 	 */
 	static public function startMove():void {
 		StageMediator.app.activeWindow.startMove();
+	}
+
+	public static function toggleMaximize() : void	{
+		if(StageMediator.nativeWin.displayState == NativeWindowDisplayState.MAXIMIZED){
+			StageMediator.nativeWin.restore();
+		} else {
+			if(StageMediator.nativeWin.maximizable){
+				StageMediator.nativeWin.maximize();
+			}
+		}
 	}
 
 	static public function sendToClipboard(text:String):void {
@@ -179,5 +196,7 @@ public class StageMediator extends Mediator {
 			dataStore.showDebugAppMessage(statusSplit[i]);
 		}
 	}
+
+
 }
 }

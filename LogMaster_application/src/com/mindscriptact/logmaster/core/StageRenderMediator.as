@@ -323,30 +323,33 @@ public class StageRenderMediator extends Mediator {
 		textSubLineNumber = textPane.startSubLine;
 
 		// move text if needed.
-		if (textPane.lineMoveAmmount > 0) {
-			textSubLineNumber += textPane.lineMoveAmmount;
-			do {
-				var checkNextLine:Boolean = false;
-				sublineCount = messages[textLineNr].getSublineCount(lineCharCount);
-				if (textSubLineNumber >= sublineCount) {
-					textSubLineNumber -= sublineCount;
-					textLineNr++;
-					checkNextLine = true;
-				}
-			} while (checkNextLine && textLineNr < messages.length);
-		} else if (textPane.lineMoveAmmount < 0) {
-			textPane.isAutoScrolling = false;
-			textSubLineNumber += textPane.lineMoveAmmount;
-			while (textSubLineNumber < 0) {
-				if (textLineNr > 0) {
-					textLineNr--;
+
+		if(messages.length > 0){
+			if (textPane.lineMoveAmmount > 0) {
+				textSubLineNumber += textPane.lineMoveAmmount;
+				do {
+					var checkNextLine:Boolean = false;
 					sublineCount = messages[textLineNr].getSublineCount(lineCharCount);
-					textSubLineNumber += sublineCount;
-				} else {
-					textSubLineNumber = 0;
+					if (textSubLineNumber >= sublineCount) {
+						textSubLineNumber -= sublineCount;
+						textLineNr++;
+						checkNextLine = true;
+					}
+				} while (checkNextLine && textLineNr < messages.length);
+			} else if (textPane.lineMoveAmmount < 0) {
+				textPane.isAutoScrolling = false;
+				textSubLineNumber += textPane.lineMoveAmmount;
+				while (textSubLineNumber < 0) {
+					if (textLineNr > 0) {
+						textLineNr--;
+						sublineCount = messages[textLineNr].getSublineCount(lineCharCount);
+						textSubLineNumber += sublineCount;
+					} else {
+						textSubLineNumber = 0;
+					}
 				}
+				sublineCount = messages[textLineNr].getSublineCount(lineCharCount);
 			}
-			sublineCount = messages[textLineNr].getSublineCount(lineCharCount);
 		}
 		textPane.lineMoveAmmount = 0;
 

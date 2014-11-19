@@ -15,7 +15,9 @@ import flash.text.TextFormat;
 
 import mvcexpress.modules.ModuleCore;
 
-/**
+	import utils.debug.Stats;
+
+	/**
  * ...
  * @author Deril
  */
@@ -33,6 +35,10 @@ public class MainModule extends ModuleCore {
 	}
 
 	public function start(main:Main):void {
+
+
+
+
 
 		//trace("StartupCommand.execute");
 		this.appStage = main.stage;
@@ -87,6 +93,9 @@ public class MainModule extends ModuleCore {
 
 		appStage.addEventListener(MouseEvent.CLICK, startServer);
 
+		var stats:Stats = new Stats(70, 10, 35);
+		stats.alpha = 0.8;
+		main.stage.addChild(stats);
 	}
 
 	private function startServer(event:MouseEvent):void {
