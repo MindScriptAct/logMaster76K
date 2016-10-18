@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<application xmlns="http://ns.adobe.com/air/application/14.0">
+<application xmlns="http://ns.adobe.com/air/application/21.0">
 	<id>com.mindscriptact.logmaster</id>
-	<versionNumber>0.07</versionNumber>
+	<versionNumber>0.10</versionNumber>
 	<filename>LogMaster76K</filename>
 	<name>LogMaster76K</name>
 	<description>LogMaster76K is universal debugging tool for trace lodging for any technology that can open socket connection. Have many different logs in different tabs.</description>

@@ -19,8 +19,7 @@
  *
  *********************************************************************/
 package com.mindscriptact.logmaster.dataOld {
-	import com.mindscriptact.logmaster.dataOld.Storadge;
-	import com.mindscriptact.logmaster.dataOld.message.MessageData;
+import com.mindscriptact.logmaster.dataOld.message.MessageData;
 import com.mindscriptact.logmaster.dataOld.settings.Settings;
 import com.mindscriptact.logmaster.event.MessageEvent;
 import com.mindscriptact.logmaster.event.TabEvent;
@@ -60,7 +59,7 @@ public class Storadge extends EventDispatcher {
 
 	CONFIG::debug
 	static private var debug_countLines:int = 1;
-	private var maxMessageCount : int = 100000;
+	private var maxMessageCount:int = 100000;
 
 	public function Storadge():void {
 		if (instance) {
@@ -104,7 +103,7 @@ public class Storadge extends EventDispatcher {
 	private function createTab(tabId:int, tabTitle:String = ""):void {
 		if (!disabledTabs[tabId]) {
 			//trace("Storadge.createTab > tabId : " + tabId + ", tabTitle : " + tabTitle);
-			tabDataStore[tabId] = new TabData();
+			tabDataStore[tabId] = new TabData(tabTitle);
 			dispatchEvent(new TabEvent(TabEvent.TAB_CREATE, tabId, tabTitle));
 		}
 	}
@@ -113,9 +112,10 @@ public class Storadge extends EventDispatcher {
 		if (!disabledTabs[tabId]) {
 			//trace("Storadge.renameTab > tabId : " + tabId + ", tabTitle : " + tabTitle);
 			if (!tabDataStore[tabId]) {
-				tabDataStore[tabId] = new TabData();
+				tabDataStore[tabId] = new TabData(tabTitle);
 				dispatchEvent(new TabEvent(TabEvent.TAB_CREATE, tabId, tabTitle));
 			} else {
+				tabDataStore[tabId].title = tabTitle;
 				dispatchEvent(new TabEvent(TabEvent.TAB_RENAME, tabId, tabTitle));
 			}
 		}
@@ -154,24 +154,34 @@ public class Storadge extends EventDispatcher {
 
 		var debugTabId:int = int.MAX_VALUE - 100 - debugId;
 
-		if (!tabDataStore[debugTabId]) {
-			if (debugId == 2) {
-				createTab(debugTabId, "[-FAILED_MSG-]");
-			} else if (debugId == 1) {
-				createTab(debugTabId, "[-UNCAUGHT_ERROR-]");
-			} else {
-				createTab(debugTabId, "[-SELF-DEBUG-]");
+
+		if (debugId == 2 || debugId == 1) {
+			if (!tabDataStore[debugTabId]) {
+				if (debugId == 2) {
+					createTab(debugTabId, "[-FAILED_MSG-]");
+				} else if (debugId == 1) {
+					createTab(debugTabId, "[-UNCAUGHT_ERROR-]");
+				}
+			}
+			addTabMessage(debugTabId, messageData);
+			if (_activeTabId == debugTabId) {
+				dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, debugTabId));
+				dispatchEvent(new MessageEvent(MessageEvent.MESSAGE_UPDATE, tabDataStore[debugTabId].log));
+			}
+		} else {
+			CONFIG::debug {
+				if (!tabDataStore[debugTabId]) {
+					createTab(debugTabId, "SELF-DEBUG");
+				}
+				addTabMessage(debugTabId, messageData);
+				if (_activeTabId == debugTabId) {
+					dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, debugTabId));
+					dispatchEvent(new MessageEvent(MessageEvent.MESSAGE_UPDATE, tabDataStore[debugTabId].log));
+				}
 			}
 		}
 
-		if (!tabDataStore[debugTabId]) {
-			createTab(debugTabId, "SELF-DEBUG");
-		}
-		addTabMessage(debugTabId, messageData);
-		if (_activeTabId == debugTabId) {
-			dispatchEvent(new TabEvent(TabEvent.TAB_CHANGE, debugTabId));
-			dispatchEvent(new MessageEvent(MessageEvent.MESSAGE_UPDATE, tabDataStore[debugTabId].log));
-		}
+
 	}
 
 	/**
@@ -319,20 +329,19 @@ public class Storadge extends EventDispatcher {
 	}
 
 	[Inline]
-	final private function addTabMessage(tabId : int, messageData : MessageData) : void
-	{
+	final private function addTabMessage(tabId:int, messageData:MessageData):void {
 		if (CONFIG::debug) {
-			if(debug_countLines){
+			if (debug_countLines) {
 				debug_countLines++;
-				messageData.msgText[messageData.msgText.length-1] += "   -="+debug_countLines+"=-";
+				messageData.msgText[messageData.msgText.length - 1] += "   -=" + debug_countLines + "=-";
 			}
 		}
-		var log:Vector.<MessageData>= tabDataStore[tabId].log;
+		var log:Vector.<MessageData> = tabDataStore[tabId].log;
 		log.push(messageData);
-		if(maxMessageCount > 0){
-		    if(log.length > maxMessageCount){
-			    log.shift();
-		    }
+		if (maxMessageCount > 0) {
+			if (log.length > maxMessageCount) {
+				log.shift();
+			}
 		}
 	}
 
@@ -390,6 +399,34 @@ public class Storadge extends EventDispatcher {
 				retVal += log[textId].msgText[subLine] + "\r\n";
 			}
 		}
+		return retVal;
+	}
+
+	public function getAllTabTexts():String {
+		var retVal:String = "";
+
+		for (var id:String in tabDataStore) {
+			var tabData:TabData = tabDataStore[id];
+
+			retVal += "################################\n";
+			retVal += "\t" + tabData.title + "\n";
+			retVal += "################################\n";
+			retVal += "\n";
+			var log:Vector.<MessageData> = tabData.log;
+			for (var textId:int = 0; textId < log.length; textId++) {
+				// TODO : check if ending MUST be handled with diferent OS.
+				// TODO : chex how this porforms to copy big amounts of daat. limit it at reasonable point if needed. (copy only last X lines...)
+				var sublineCount:int = log[textId].msgText.length;
+				for (var subLine:int = 0; subLine < sublineCount; subLine++) {
+					retVal += log[textId].msgText[subLine] + "\r\n";
+				}
+			}
+			retVal += "\n";
+			retVal += "\n";
+
+		}
+
+
 		return retVal;
 	}
 

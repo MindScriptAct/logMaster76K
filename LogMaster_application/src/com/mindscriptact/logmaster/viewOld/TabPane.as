@@ -27,6 +27,7 @@ import com.mindscriptact.logmaster.viewOld.components.TabButton;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
+import flash.system.System;
 
 /**
  * Visual element to handle tabs.
@@ -46,6 +47,8 @@ public class TabPane extends Sprite {
 	private var tabs:Vector.<TabButton> = new Vector.<TabButton>();
 
 	private var closeButton:CloseBTN = new CloseBTN();
+
+	private var copyAllButton:CopyAllBTN = new CopyAllBTN();
 
 	CONFIG::debug
 	private var debugButton:CloseBTN = new CloseBTN();
@@ -72,6 +75,8 @@ public class TabPane extends Sprite {
 		//
 		addChild(closeButton);
 		closeButton.addEventListener(MouseEvent.CLICK, handleCloseaApp);
+		addChild(copyAllButton);
+		copyAllButton.addEventListener(MouseEvent.CLICK, handleCopyAll);
 
 
 		CONFIG::debug {
@@ -88,7 +93,7 @@ public class TabPane extends Sprite {
 		StageMediator.startMove();
 	}
 
-	private function handleDoubleClick(event : MouseEvent) : void {
+	private function handleDoubleClick(event:MouseEvent):void {
 		StageMediator.toggleMaximize();
 	}
 
@@ -105,9 +110,12 @@ public class TabPane extends Sprite {
 		closeButton.x = windowWidth - 20 - 5;
 		closeButton.y = 5;
 		//
+		copyAllButton.x = windowWidth - 20 - 30 - 5;
+		copyAllButton.y = 5;
+		//
 		CONFIG::debug {
 			debugButton.rotation = 45;
-			debugButton.x = closeButton.x - 20;
+			debugButton.x = copyAllButton.x - 30;
 			debugButton.y = 5;
 		}
 
@@ -216,6 +224,10 @@ public class TabPane extends Sprite {
 	private function handleCloseaApp(event:MouseEvent):void {
 		//this.stage.root
 		StageMediator.closeApp();
+	}
+
+	private function handleCopyAll(event:MouseEvent):void {
+		System.setClipboard(dataStore.getAllTabTexts());
 	}
 
 	/**

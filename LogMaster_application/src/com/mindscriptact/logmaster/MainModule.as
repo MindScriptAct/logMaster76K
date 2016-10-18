@@ -93,9 +93,11 @@ public class MainModule extends ModuleCore {
 
 		appStage.addEventListener(MouseEvent.CLICK, startServer);
 
-		var stats:Stats = new Stats(70, 10, 35);
-		stats.alpha = 0.8;
-		main.stage.addChild(stats);
+		CONFIG::debug {
+			var stats:Stats = new Stats(70, 10, 35);
+			stats.alpha = 0.8;
+			main.stage.addChild(stats);
+		}
 	}
 
 	private function startServer(event:MouseEvent):void {

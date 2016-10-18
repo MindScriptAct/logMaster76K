@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="LogMasterApplication">
+  <component name="FlexBuildConfigurationManager" active="LogMasterApplication-debug">
     <configurations>
-      <configuration name="LogMasterApplication" target-platform="Desktop" pure-as="true" main-class="com.mindscriptact.logmaster.Main" output-file="LogMasterApplication.swf" output-folder="$MODULE_DIR$/bin">
+      <configuration name="LogMasterApplication-debug" target-platform="Desktop" pure-as="true" main-class="com.mindscriptact.logmaster.Main" output-file="LogMasterApplication.swf" output-folder="$MODULE_DIR$/bin">
         <dependencies target-player="11.7">
           <entries>
             <entry library-id="f1830500-b20d-48c9-a181-6c05a35e3eba">
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="air_14.0.0.137" />
+          <sdk name="apache_flex_sdk_4.15.0" />
         </dependencies>
         <compiler-options>
           <map>
@@ -18,6 +18,54 @@
           <option name="additionalOptions" value="-keep-as3-metadata+=Inject" />
         </compiler-options>
         <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/application.xml" package-file-name="LogMaster76K">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/resources" path-in-package="." />
+          </files-to-package>
+          <AirSigningOptions keystore-path="$MODULE_DIR$/bat/logKey.p12" use-temp-certificate="false" />
+        </packaging-air-desktop>
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="LogMasterAppGenerated" target-platform="Desktop" pure-as="true" main-class="com.mindscriptact.logmaster.Main" output-file="LogMasterAppGenerated.swf" output-folder="$MODULE_DIR$/bin">
+        <dependencies>
+          <entries>
+            <entry library-id="8aa8f31d-cddc-4919-b795-be83abc9ea76">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="apache_flex_sdk_4.15.0" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.define" value="CONFIG::debug&#9;true" />
+          </map>
+          <option name="additionalOptions" value="-keep-as3-metadata+=Inject" />
+        </compiler-options>
+        <packaging-air-desktop custom-descriptor-path="$MODULE_DIR$/application.xml" package-file-name="LogMasterAppGenerated">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/resources" path-in-package="." />
+          </files-to-package>
+          <AirSigningOptions keystore-path="$MODULE_DIR$/bat/logKey.p12" use-temp-certificate="false" />
+        </packaging-air-desktop>
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="LogMasterApplication" target-platform="Desktop" pure-as="true" main-class="com.mindscriptact.logmaster.Main" output-file="LogMasterApplication.swf" output-folder="$MODULE_DIR$/bin">
+        <dependencies>
+          <entries>
+            <entry library-id="15510f5a-cd09-4c94-884d-22ab4d673ff8">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="apache_flex_sdk_4.15.0" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.define" value="CONFIG::debug&#9;false" />
+          </map>
+          <option name="additionalOptions" value="-keep-as3-metadata+=Inject" />
+        </compiler-options>
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/application.xml" package-file-name="LogMasterApplication">
           <files-to-package>
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/resources" path-in-package="." />
           </files-to-package>
@@ -36,7 +84,7 @@
       <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libSrc" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="air_14.0.0.137" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="apache_flex_sdk_4.15.0" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library type="flex">
@@ -48,6 +96,25 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="8aa8f31d-cddc-4919-b795-be83abc9ea76" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/assets.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="15510f5a-cd09-4c94-884d-22ab4d673ff8" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/assets.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
-

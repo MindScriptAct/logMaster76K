@@ -109,31 +109,70 @@ public class ClientSocket extends EventDispatcher {
 	private function handleClientData(event:ProgressEvent):void {
 		dataStore.showDebugAppMessage("ClientSocket.handleClientData");
 		//trace("ClientSocket.handleClientData > event : " + event);
-		var newData:String = socket.readUTFBytes(socket.bytesAvailable)
+		var newData:String = socket.readUTFBytes(socket.bytesAvailable);
 		data += newData;
 		parse();
 	}
 
+	CONFIG::debug
+	private var parseLog:String = "";
+
+	CONFIG::debug
+	private var parseLogArray:Array = [];
+
 	private function parse():void {
+
+		CONFIG::debug {
+			parseLog = "";
+			debugLog(" starting data : -------------------");
+			debugLog(data);
+			debugLog(" -----------------------------------");
+		}
+
 		//trace("---###>>>>> ClientSocket.parse " + data);
 		var endPoss:int;
 
 		// TODO : check for fastest string search implementation.
 		do {
+			var xmlStartFound:Boolean = false;
 			var newDataParsed:Boolean = false;
-
 			//
+
 			if (data.charAt(0) == "<") {
+				CONFIG::debug {
+					debugLog("open bracket found");
+				}
 				if (data.indexOf("<msg") == 0) {
+					xmlStartFound = true;
+					CONFIG::debug {
+						debugLog("msg start found");
+					}
 					endPoss = data.indexOf("</msg>");
+					CONFIG::debug {
+						debugLog("endPoss =" + endPoss);
+					}
 
 					////trace("#### MSG : " + data.substr(0, endPoss + 6));
 					if (endPoss >= 0) {
+						CONFIG::debug {
+							debugLog(" parsing data : -------------------");
+							debugLog(data.substr(0, endPoss + 6));
+							debugLog(" -----------------------------------");
+						}
 						dataStore.parseMessageData(this._id, data.substr(0, endPoss + 6));
 						data = data.substring(endPoss + 6);
+						CONFIG::debug {
+							debugLog(" substringed data : -------------------");
+							debugLog(data);
+							debugLog(" -----------------------------------");
+						}
 						newDataParsed = true;
 					}
 				} else if (data.indexOf("<graph") == 0) {
+					xmlStartFound = true;
+					CONFIG::debug {
+						debugLog(" parsing praph...");
+					}
 					endPoss = data.indexOf("</graph>");
 
 					////trace("#### GRAPH : " + data.substr(0, endPoss + 8));
@@ -141,7 +180,16 @@ public class ClientSocket extends EventDispatcher {
 						data = data.substring(endPoss + 8);
 						newDataParsed = true;
 					}
+					CONFIG::debug {
+						debugLog(" substringed data : -------------------");
+						debugLog(data);
+						debugLog(" -----------------------------------");
+					}
 				} else if (data.indexOf("<whatch") == 0) {
+					xmlStartFound = true;
+					CONFIG::debug {
+						debugLog(" parsing whatch...");
+					}
 					endPoss = data.indexOf("</whatch>");
 
 					////trace("#### WHATCH : " + data.substr(0, endPoss + 9));
@@ -149,7 +197,16 @@ public class ClientSocket extends EventDispatcher {
 						data = data.substring(endPoss + 9);
 						newDataParsed = true;
 					}
+					CONFIG::debug {
+						debugLog(" substringed data : -------------------");
+						debugLog(data);
+						debugLog(" -----------------------------------");
+					}
 				} else if (data.indexOf("<cmd") == 0) {
+					xmlStartFound = true;
+					CONFIG::debug {
+						debugLog(" parsing cmd...");
+					}
 					endPoss = data.indexOf("</cmd>");
 
 					////trace("#### CMD : " + data.substr(0, endPoss + 6));
@@ -158,7 +215,16 @@ public class ClientSocket extends EventDispatcher {
 						data = data.substring(endPoss + 6);
 						newDataParsed = true;
 					}
+					CONFIG::debug {
+						debugLog(" substringed data : -------------------");
+						debugLog(data);
+						debugLog(" -----------------------------------");
+					}
 				} else if (data.indexOf("<html>") == 0) {
+					xmlStartFound = true;
+					CONFIG::debug {
+						debugLog(" parsing html...");
+					}
 					endPoss = data.indexOf("</html>");
 
 					////trace("#### HTML : " + data.substr(0, endPoss + 7));
@@ -166,13 +232,22 @@ public class ClientSocket extends EventDispatcher {
 						data = data.substring(endPoss + 7);
 						newDataParsed = true;
 					}
+					CONFIG::debug {
+						debugLog(" substringed data : -------------------");
+						debugLog(data);
+						debugLog(" -----------------------------------");
+					}
 				}
 			}
-
-			if (!newDataParsed) { // rezerved XML tag not found, try to treat as simple text that ends with new line.
+			if (!xmlStartFound && !newDataParsed) { // rezerved XML tags not found, try to treat as simple text that ends with new line.
+				CONFIG::debug {
+					debugLog(" rezerved xml not found... try to handle as text that ends with new line...");
+				}
 				// simpe text, find first new line character, and treat as flash html text.
 				endPoss = data.indexOf("\n");
-
+				CONFIG::debug {
+					debugLog("endPoss = " + endPoss);
+				}
 				if (endPoss > 0) {
 					////trace("#### TEXT : " + data.substr(0, endPoss));
 					// TODO : refartor, treat as default message. Remouve text tag comepleatly.
@@ -181,6 +256,9 @@ public class ClientSocket extends EventDispatcher {
 				}
 
 				if (endPoss == 0) {
+					CONFIG::debug {
+						debugLog("remove empty new line..");
+					}
 					////trace("#### EMTY NEW LINE FOUND, REMOVED. ");
 					newDataParsed = true;
 				}
@@ -188,15 +266,56 @@ public class ClientSocket extends EventDispatcher {
 				// ERROR HANDLING!!!
 				// FIXME : Find why this is possible.
 				var errorPos:int = data.indexOf("</msg>");
-				if(errorPos >= 0){
-					var errorousText:String =  data.substr(0, errorPos + 6);
-					data = data.substring(errorPos + 6);
+				CONFIG::debug {
+					debugLog(" looking for errorPos = " + errorPos);
+				}
+				if (errorPos >= 0) {
+					CONFIG::debug {
+						debugLog(" error message found! ");
+						debugLog(" error data : -------------------");
+						debugLog(data);
+						debugLog(" -----------------------------------");
+					}
+					var errorousText:String = data.substr(0, errorPos + 6);
 					dataStore.showDebugAppMessage(errorousText, 2);
+					data = data.substring(errorPos + 6);
+					CONFIG::debug {
+						debugLog(" substringed data : -------------------");
+						debugLog(data);
+						debugLog(" -----------------------------------");
+					}
 					newDataParsed = true;
 				}
+				CONFIG::debug {
+					debugLog(" data remaining... : -------------------");
+					debugLog(data);
+					debugLog(" -----------------------------------");
+				}
 				data = data.substring(endPoss + 1);
+				CONFIG::debug {
+					debugLog(" remove handled data : -------------------");
+					debugLog(data);
+					debugLog(" -----------------------------------");
+				}
 			}
 		} while (newDataParsed && data.length > 0);
+
+		CONFIG::debug {
+			rememberLog();
+		}
+	}
+
+	CONFIG::debug
+	private function rememberLog():void {
+		parseLogArray.push(parseLog);
+		if (parseLogArray.length > 5) {
+			parseLogArray.shift();
+		}
+	}
+
+	CONFIG::debug
+	private function debugLog(msg:String):void {
+		parseLog += msg + "\n";
 	}
 
 	/**

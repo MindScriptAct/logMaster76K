@@ -23,6 +23,7 @@ import flash.display.Sprite;
 import flash.display.Stage;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
+import flash.system.Security;
 
 
 /**
@@ -36,12 +37,18 @@ public class Main extends Sprite {
 	private var fontPack:FontPack = new FontPack();
 
 	public function Main():void {
+
+		//Security.allowInsecureDomain('*');
+		//Security.allowDomain('*');
+
 		// stage set up
 		this.stage.scaleMode = StageScaleMode.NO_SCALE;
 		this.stage.align = StageAlign.TOP_LEFT;
 		//
 		var mainModule:MainModule = new MainModule();
 		mainModule.start(this);
+
+
 	}
 
 }
